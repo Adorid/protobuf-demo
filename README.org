@@ -10,6 +10,19 @@ https://developers.google.com/protocol-buffers/
 - protoc             for compiling proto files
 - protobuf==3.2.0    for handing pb in python
 
+* general proto file document
+proto2
+https://developers.google.com/protocol-buffers/docs/proto
+proto3
+https://developers.google.com/protocol-buffers/docs/proto3
+
+* python documents
+basic usage
+https://developers.google.com/protocol-buffers/docs/pythontutorial
+
+references
+https://developers.google.com/protocol-buffers/docs/reference/python/
+
 * test protcol buffer
 - if sender has old proto file, receiver has new proto file that has new
   optional fields. Can receiver access the optional field without checking by

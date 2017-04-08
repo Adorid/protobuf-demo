@@ -5,7 +5,10 @@
 test file
 """
 
+import json
 import six
+
+from google.protobuf import json_format     # pylint: disable=no-name-in-module
 
 from . import service_pb2
 
@@ -49,3 +52,55 @@ def test_encode_decode():
     dst.ParseFromString(encode_result)
     assert dst.city == src.city
     assert dst.days == src.days
+
+
+def test_to_json():
+    req = service_pb2.GetWeatherRequest()
+    req.city = "Austin"
+    req.days = 3
+
+    json_string = json_format.MessageToJson(req)
+    obj = json.loads(json_string)
+    assert obj['city'] == 'Austin'
+    assert obj['days'] == 3
+
+
+def test_to_json_include_default_value():
+    req = service_pb2.GetWeatherRequest()
+    json_string = json_format.MessageToJson(req, True)
+    obj = json.loads(json_string)
+    assert obj['city'] == ''
+    assert obj['days'] == 0
+
+
+def test_from_json():
+    obj = {
+        'city': 'Austin',
+        'days': 3,
+    }
+    json_string = json.dumps(obj)
+    req = json_format.Parse(json_string, service_pb2.GetWeatherRequest())
+    assert req.city == 'Austin'
+    assert req.days == 3
+
+
+def test_from_json_some_fields_missing():
+    obj = {
+        'city': 'Austin',
+    }
+    json_string = json.dumps(obj)
+    req = json_format.Parse(json_string, service_pb2.GetWeatherRequest())
+    assert req.city == 'Austin'
+    assert req.days == 0
+
+
+def test_from_json_ignore_unknown_fields():
+    obj = {
+        'city': 'Austin',
+        'days': 3,
+        'time': '07:00',
+    }
+    json_string = json.dumps(obj)
+    req = json_format.Parse(json_string, service_pb2.GetWeatherRequest(), True)
+    assert req.city == 'Austin'
+    assert req.days == 3
