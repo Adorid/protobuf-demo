@@ -104,3 +104,28 @@ def test_from_json_ignore_unknown_fields():
     req = json_format.Parse(json_string, service_pb2.GetWeatherRequest(), True)
     assert req.city == 'Austin'
     assert req.days == 3
+
+
+def test_MergeFrom():
+    req = service_pb2.GetWeatherRequest()
+    req.city = "Austin"
+
+    req2 = service_pb2.GetWeatherRequest()
+    req2.city = "Boston"
+    req2.days = 4
+    req2.MergeFrom(req)
+    assert req2.city == "Austin"
+    assert req2.days == 4
+
+
+def test_CopyFrom():
+    req = service_pb2.GetWeatherRequest()
+    req.city = "Austin"
+    req.days = 3
+
+    req2 = service_pb2.GetWeatherRequest()
+    req2.city = "Boston"
+    req2.days = 4
+    req2.CopyFrom(req)    # will reset req2 first. then call MergeFrom.
+    assert req2.city == "Austin"
+    assert req2.days == 3
