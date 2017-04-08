@@ -1,0 +1,16 @@
+* COMMENT -*- mode: org -*-
+#+Date: 2017-04-08
+Time-stamp: <2017-04-08>
+
+* about protocol buffer
+Protocol Buffers  |  Google Developers
+https://developers.google.com/protocol-buffers/
+
+* dependencies
+- protoc             for compiling proto files
+- protobuf==3.2.0    for handing pb in python
+
+* test protcol buffer
+- if sender has old proto file, receiver has new proto file that has new
+  optional fields. Can receiver access the optional field without checking by
+  HasField('xxx')?
