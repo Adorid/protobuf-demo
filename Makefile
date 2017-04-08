@@ -26,6 +26,8 @@ test: bootstrap
 	$(PEP8) --repeat --ignore=E202,E501,E402 --exclude="*_pb2.py" $(PYTHON_MODULES)
 	$(PYLINT) -E --ignore-patterns=".*_pb2.py" $(PYTHON_MODULES)
 	$(PYTEST)  $(PYTHON_MODULES)
+pipfreeze:
+	$(PIP) freeze
 
 # project specific
 build:
