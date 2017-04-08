@@ -5,7 +5,6 @@ package demo;
 message GetWeatherRequest {
 	string city = 1;
 	int32 days = 2;
-	bool realtime = 3;
 }
 
 message WeatherInfo {

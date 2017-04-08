@@ -20,6 +20,8 @@ from google.protobuf.text_format import MessageToString                  # pylin
 import service_pb2
 
 
+logging.basicConfig(format='%(levelname)-8s %(message)s',
+                    level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
@@ -59,6 +61,9 @@ def get_weather():
     req = service_pb2.GetWeatherRequest()
     req.ParseFromString(body.read())    # pylint: disable=no-member
     logger.info("request is:\n%s", req)
+
+    logger.info("req.realtime=%s", req.realtime)
+
     r = service_pb2.GetWeatherResponse()
     wi = r.weatherinfo.add()
     wi.city = req.city

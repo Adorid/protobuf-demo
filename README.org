@@ -27,3 +27,9 @@ https://developers.google.com/protocol-buffers/docs/reference/python/
 - if sender has old proto file, receiver has new proto file that has new
   optional fields. Can receiver access the optional field without checking by
   HasField('xxx')?
+
+  yes. as long as the server has the new proto file, it's okay to access the
+  field directly without checking. you will get default value for the type.
+
+  also check HasField's document.
+  I think it's only used for duck typing at runtime.

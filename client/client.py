@@ -9,7 +9,7 @@ from __future__ import print_function, unicode_literals
 
 import requests
 
-from server import service_pb2
+import service_pb2
 
 
 def main():

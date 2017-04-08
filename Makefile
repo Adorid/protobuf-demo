@@ -32,6 +32,7 @@ pipfreeze:
 # project specific
 build:
 	protoc -I=server/ --python_out=server/ server/service.proto
+	protoc -I=client/ --python_out=client/ client/service.proto
 run:
 	env PYTHONPATH=. DEBUG=1 $(PYTHON) server/server.py
 client:

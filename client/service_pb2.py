@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='service.proto',
   package='demo',
   syntax='proto3',
-  serialized_pb=_b('\n\rservice.proto\x12\x04\x64\x65mo\"A\n\x11GetWeatherRequest\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ys\x18\x02 \x01(\x05\x12\x10\n\x08realtime\x18\x03 \x01(\x08\"|\n\x0bWeatherInfo\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\t\x12\x17\n\x0ftemperature_low\x18\x03 \x01(\x05\x12\x18\n\x10temperature_high\x18\x04 \x01(\x05\x12\x0c\n\x04wind\x18\x05 \x01(\x05\x12\x10\n\x08humidity\x18\x06 \x01(\x05\"<\n\x12GetWeatherResponse\x12&\n\x0bweatherinfo\x18\x01 \x03(\x0b\x32\x11.demo.WeatherInfob\x06proto3')
+  serialized_pb=_b('\n\rservice.proto\x12\x04\x64\x65mo\"/\n\x11GetWeatherRequest\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ys\x18\x02 \x01(\x05\"|\n\x0bWeatherInfo\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\t\x12\x17\n\x0ftemperature_low\x18\x03 \x01(\x05\x12\x18\n\x10temperature_high\x18\x04 \x01(\x05\x12\x0c\n\x04wind\x18\x05 \x01(\x05\x12\x10\n\x08humidity\x18\x06 \x01(\x05\"<\n\x12GetWeatherResponse\x12&\n\x0bweatherinfo\x18\x01 \x03(\x0b\x32\x11.demo.WeatherInfob\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -47,13 +47,6 @@ _GETWEATHERREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-    _descriptor.FieldDescriptor(
-      name='realtime', full_name='demo.GetWeatherRequest.realtime', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
@@ -67,7 +60,7 @@ _GETWEATHERREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=23,
-  serialized_end=88,
+  serialized_end=70,
 )
 
 
@@ -132,8 +125,8 @@ _WEATHERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=90,
-  serialized_end=214,
+  serialized_start=72,
+  serialized_end=196,
 )
 
 
@@ -163,8 +156,8 @@ _GETWEATHERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=216,
-  serialized_end=276,
+  serialized_start=198,
+  serialized_end=258,
 )
 
 _GETWEATHERRESPONSE.fields_by_name['weatherinfo'].message_type = _WEATHERINFO
