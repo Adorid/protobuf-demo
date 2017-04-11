@@ -20,3 +20,17 @@ message WeatherInfo {
 message GetWeatherResponse {
 	repeated WeatherInfo weatherinfo = 1;
 }
+
+message MessageFoo {
+	string f1 = 1;
+	string f2 = 2;
+	string foo1 = 3;
+	string foo2 = 4;
+}
+
+message MessageBar {
+	string f1 = 1;
+	string f2 = 2;
+	string bar1 = 3;
+	string bar2 = 4;
+}

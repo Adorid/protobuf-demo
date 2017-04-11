@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='service.proto',
   package='demo',
   syntax='proto3',
-  serialized_pb=_b('\n\rservice.proto\x12\x04\x64\x65mo\"A\n\x11GetWeatherRequest\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ys\x18\x02 \x01(\x05\x12\x10\n\x08realtime\x18\x03 \x01(\x08\"|\n\x0bWeatherInfo\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\t\x12\x17\n\x0ftemperature_low\x18\x03 \x01(\x05\x12\x18\n\x10temperature_high\x18\x04 \x01(\x05\x12\x0c\n\x04wind\x18\x05 \x01(\x05\x12\x10\n\x08humidity\x18\x06 \x01(\x05\"<\n\x12GetWeatherResponse\x12&\n\x0bweatherinfo\x18\x01 \x03(\x0b\x32\x11.demo.WeatherInfob\x06proto3')
+  serialized_pb=_b('\n\rservice.proto\x12\x04\x64\x65mo\"A\n\x11GetWeatherRequest\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ys\x18\x02 \x01(\x05\x12\x10\n\x08realtime\x18\x03 \x01(\x08\"|\n\x0bWeatherInfo\x12\x0c\n\x04\x63ity\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61te\x18\x02 \x01(\t\x12\x17\n\x0ftemperature_low\x18\x03 \x01(\x05\x12\x18\n\x10temperature_high\x18\x04 \x01(\x05\x12\x0c\n\x04wind\x18\x05 \x01(\x05\x12\x10\n\x08humidity\x18\x06 \x01(\x05\"<\n\x12GetWeatherResponse\x12&\n\x0bweatherinfo\x18\x01 \x03(\x0b\x32\x11.demo.WeatherInfo\"@\n\nMessageFoo\x12\n\n\x02\x66\x31\x18\x01 \x01(\t\x12\n\n\x02\x66\x32\x18\x02 \x01(\t\x12\x0c\n\x04\x66oo1\x18\x03 \x01(\t\x12\x0c\n\x04\x66oo2\x18\x04 \x01(\t\"@\n\nMessageBar\x12\n\n\x02\x66\x31\x18\x01 \x01(\t\x12\n\n\x02\x66\x32\x18\x02 \x01(\t\x12\x0c\n\x04\x62\x61r1\x18\x03 \x01(\t\x12\x0c\n\x04\x62\x61r2\x18\x04 \x01(\tb\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -167,10 +167,116 @@ _GETWEATHERRESPONSE = _descriptor.Descriptor(
   serialized_end=276,
 )
 
+
+_MESSAGEFOO = _descriptor.Descriptor(
+  name='MessageFoo',
+  full_name='demo.MessageFoo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='f1', full_name='demo.MessageFoo.f1', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='f2', full_name='demo.MessageFoo.f2', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='foo1', full_name='demo.MessageFoo.foo1', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='foo2', full_name='demo.MessageFoo.foo2', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=278,
+  serialized_end=342,
+)
+
+
+_MESSAGEBAR = _descriptor.Descriptor(
+  name='MessageBar',
+  full_name='demo.MessageBar',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='f1', full_name='demo.MessageBar.f1', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='f2', full_name='demo.MessageBar.f2', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='bar1', full_name='demo.MessageBar.bar1', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='bar2', full_name='demo.MessageBar.bar2', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=344,
+  serialized_end=408,
+)
+
 _GETWEATHERRESPONSE.fields_by_name['weatherinfo'].message_type = _WEATHERINFO
 DESCRIPTOR.message_types_by_name['GetWeatherRequest'] = _GETWEATHERREQUEST
 DESCRIPTOR.message_types_by_name['WeatherInfo'] = _WEATHERINFO
 DESCRIPTOR.message_types_by_name['GetWeatherResponse'] = _GETWEATHERRESPONSE
+DESCRIPTOR.message_types_by_name['MessageFoo'] = _MESSAGEFOO
+DESCRIPTOR.message_types_by_name['MessageBar'] = _MESSAGEBAR
 
 GetWeatherRequest = _reflection.GeneratedProtocolMessageType('GetWeatherRequest', (_message.Message,), dict(
   DESCRIPTOR = _GETWEATHERREQUEST,
@@ -192,6 +298,20 @@ GetWeatherResponse = _reflection.GeneratedProtocolMessageType('GetWeatherRespons
   # @@protoc_insertion_point(class_scope:demo.GetWeatherResponse)
   ))
 _sym_db.RegisterMessage(GetWeatherResponse)
+
+MessageFoo = _reflection.GeneratedProtocolMessageType('MessageFoo', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGEFOO,
+  __module__ = 'service_pb2'
+  # @@protoc_insertion_point(class_scope:demo.MessageFoo)
+  ))
+_sym_db.RegisterMessage(MessageFoo)
+
+MessageBar = _reflection.GeneratedProtocolMessageType('MessageBar', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGEBAR,
+  __module__ = 'service_pb2'
+  # @@protoc_insertion_point(class_scope:demo.MessageBar)
+  ))
+_sym_db.RegisterMessage(MessageBar)
 
 
 # @@protoc_insertion_point(module_scope)

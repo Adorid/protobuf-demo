@@ -118,6 +118,22 @@ def test_MergeFrom():
     assert req2.days == 4
 
 
+def test_MergeFrom_different_type_is_not_supported():
+    req = service_pb2.MessageFoo()
+    req.f1 = "f1"
+    req.f2 = "f2"
+    req.foo1 = "foo1"
+    req.foo2 = "foo2"
+
+    req2 = service_pb2.MessageBar()
+    try:
+        req2.MergeFrom(req)
+        assert False, ("should not be able to call MergeFrom "
+                       "with different types")
+    except TypeError:
+        pass
+
+
 def test_CopyFrom():
     req = service_pb2.GetWeatherRequest()
     req.city = "Austin"
